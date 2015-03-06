@@ -1,22 +1,15 @@
 <div class="container margin-top-70">
-
-<div ng-include src="registered"></div>
-
-<div ng-hide="registered">
-
- <div class="row">
-    <div class="col-md-12">
-
-  <div class="row">
-    <div class="col-md-12 text-center">
-
-      <alert class="danger" ng-if="confirmation_error"><h1>Hoppla!</h1>
-      Het was een domme fout, de zeldzame verschijning. Ik moet handmatig uw e-mailadres activeren. Kunt u mij antwoord hierop klikt u op het net ontvangen e-mail met de tekst "activeer" bevestiging? Ik meld 'me dan. Sorry!
-      </alert>
-
-      <div ng-show="just_confirmed">
-
-        <h2 style="margin-bottom:15px;">Super, deine E-Mail-Adresse wurde bestätigt!</h2>
+  <div ng-include src="registered"></div>
+    <div ng-hide="registered">
+     <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-12 text-center">
+          <alert class="danger" ng-if="confirmation_error"><h1>Hoppla!</h1>
+          Het was een domme fout, de zeldzame verschijning. Ik moet handmatig uw e-mailadres activeren. Kunt u mij antwoord hierop klikt u op het net ontvangen e-mail met de tekst "activeer" bevestiging? Ik meld 'me dan. Sorry!
+          </alert>
+        <div ng-show="just_confirmed">
+        <h2 style="margin-bottom:15px;">Geweldig, uw email adres is bevestigd!</h2>
 
         <i class="icon-check" style="color: #ddd;font-size: 150px;text-shadow: 1px 1px 0 black;"></i>
       </div>
@@ -55,7 +48,7 @@
           <div ng-hide="forgot_pw">
 
               <div class="form-group" ng-class="{ 'has-error' : LoginForm.password.$invalid && !LoginForm.password.$pristine }">
-                <label for="inputPassword3" class="col-sm-2 control-label">Passwort</label>
+                <label for="inputPassword3" class="col-sm-2 control-label">Wachtwoord</label>
                 <div class="col-sm-10 text-left">
                   <input autofill name="password" ng-model="login_user.password" type="password" class="form-control" id="inputPassword3" ng-minlength="4" required autocomplete='off'>
                   <p ng-show="(LoginForm.password.$error.minlength || LoginForm.password.$error.required) && !LoginForm.password.$pristine" class="help-block">Geef aub correct wachtwoord op.</p>
@@ -82,37 +75,18 @@
                   &nbsp;&nbsp;<a href="#" ng-click="forgot_pw_open()">Wachtwoord vergeten?</a>
                 </div>
               </div>
-
           </div>
-
             <div ng-show="forgot_pw">
-              <a href="#" ng-click="cancel_forgot_pw()" class="btn-grey btn-small btn-pad">Zurück</a>
+              <a href="#" ng-click="cancel_forgot_pw()" class="btn-grey btn-small btn-pad">Terug</a>
               <button type="button" ng-click="reset_password()" class="btn btn-special btn-color" ng-disabled="LoginForm.email.$invalid"><div class="spinner" ng-show="submitted_reset">
                       <div class="bounce1"></div>
                       <div class="bounce2"></div>
                       <div class="bounce3"></div>
                     </div>
-                    <span ng-hide="submitted_reset">Passwort zurücksetzen</span>
-                  </button>
+                  <span ng-hide="submitted_reset">Wachtwoord herstellen</span>
+                </button>
             </div>
-
-            </form>
-
-
-
-
+          </form>
     <div class="clearfix"></div>
-
-<!-- <div class="row text-center">
-  <div class="col-md-12">
-  <hr>
-  <h2>Brauchst du Hilfe?</h2>
-  <div>
-    <p>Vielleicht hilft dieses Video. Ansonsten schreib mir eine <a href="mailto:support@mein-grundeinkommen.de">Mail</a>.</p>
-    <iframe width="100%" height="300" src="//www.youtube.com/embed/5Dx4q95kdU0" frameborder="0" allowfullscreen></iframe>
   </div>
-</div>
-</div> -->
-
-</div>
 </div>

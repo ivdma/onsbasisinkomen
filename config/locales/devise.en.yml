@@ -3,59 +3,58 @@
 en:
   devise:
     confirmations:
-      confirmed: "Vielen Dank für Deine Registrierung. Bitte melde dich jetzt an."
-      confirmed_and_signed_in: "Vielen Dank für Deine Registrierung. Du bist jetzt angemeldet."
-      send_instructions: "Du erhältst in wenigen Minuten eine E-Mail, mit der Du Deine Registrierung bestätigen kannst."
-      send_paranoid_instructions: "Falls Deine E-Mail-Adresse in unserer Datenbank existiert erhältst Du in wenigen Minuten eine E-Mail mit der Du Deine Registrierung bestätigen kannst."
+      confirmed: 'Je account is bevestigd.'
+      send_instructions: 'Je ontvangt via e-mail instructies hoe je je account kan bevestigen.'
+      send_paranoid_instructions: 'Als je e-mailadres bestaat in de database, ontvang je via e-mail instructies hoe je je account kan bevestigen.'
     failure:
-      already_authenticated: "Du bist bereits angemeldet."
-      inactive: "Dein Account ist nicht aktiv."
-      invalid: "Ungültige Anmeldedaten. (Wenn dein Browser das Passwort vorausgefüllt hat, versuche es händisch einzugeben)"
-      invalid_token: "Der Anmelde-Token ist ungültig."
-      locked: "Dein Account ist gesperrt."
-      not_found_in_database: "E-Mail-Adresse oder Passwort ungültig. Bist du überhaupt schon registriert?"
-      timeout: "Deine Sitzung ist abgelaufen, bitte melde Dich erneut an."
-      unauthenticated: "Du musst Dich anmelden oder registrieren, bevor Du fortfahren kannst. (Wenn dein Browser das Passwort vorausgefüllt hat, versuche es händisch einzugeben)"
-      unconfirmed: "Du musst Deinen Account bestätigen, bevor Du fortfahren kannst. [[resend_link]]"
+      already_authenticated: 'Je bent al ingelogd.'
+      unauthenticated: 'Je dient in te loggen of je in te schrijven.'
+      unconfirmed: 'Je dient eerst je account te bevestigen.'
+      locked: 'Je account is gelocked.'
+      invalid: 'Ongeldig e-mail of wachtwoord.'
+      invalid_token: 'Invalide authenticiteit token.'
+      timeout: 'Je sessie is verlopen, log a.u.b. opnieuw in.'
+      inactive: 'Je account is nog niet geactiveerd.'
+      last_attempt: 'Je hebt nog een poging over voordat je account wordt geblokkeerd.'
+      not_found_in_database: "Ongeldig e-mail of wachtwoord."
     mailer:
       confirmation_instructions:
-        subject: "Bitte bestätige Deine E-Mail-Adresse"
+        subject: 'Bevestiging mailadres'
       reset_password_instructions:
-        subject: "Anleitung um Dein Passwort zurückzusetzen"
+        subject: 'Wachtwoord resetten'
       unlock_instructions:
-        subject: "Anleitung um Deinen Account freizuschalten"
+        subject: 'Unlock instructies'
     omniauth_callbacks:
-      failure: "Du konntest nicht Deinem %{kind}-Account angemeldet werden, weil '%{reason}'."
-      success: "Du hast Dich erfolgreich mit Deinem %{kind}-Account angemeldet."
+      success: 'Successvol aangemeld met je %{kind} account.'
+      failure: 'Kon je niet aanmelden met je %{kind} account, omdat "%{reason}".'
     passwords:
-      no_token: "Du kannst diese Seite nur von dem Link aus einer E-Mail zum Passwort-Zurücksetzen aufrufen. Wenn du einen solchen Link aufgerufen hast stelle bitte sicher, dass du die vollständige Adresse aufrufst."
-      send_instructions: "Du erhältst in wenigen Minuten eine E-Mail mit der Anleitung, wie Du Dein Passwort zurücksetzen kannst."
-      send_paranoid_instructions: "Falls Deine E-Mail-Adresse in unserer Datenbank existiert erhältst Du in wenigen Minuten eine E-Mail mit der Anleitung, wie Du Dein Passwort zurücksetzen können."
-      updated: "Dein Passwort wurde geändert. Du bist jetzt angemeldet."
-      updated_not_active: "Dein Passwort wurde geändert."
+      no_token: 'Je kan deze pagina niet benaderen zonder een "wachtwoord reset e-mail"'
+      send_instructions: 'Je ontvangt via e-mail instructies hoe je je wachtwoord moet resetten.'
+      send_paranoid_instructions: 'Als je e-mailadres bestaat in de database, ontvang je via e-mail instructies hoe je je wachtwoord moet resetten.'
+      updated: 'Je wachtwoord is gewijzigd. Je bent nu ingelogd.'
+      updated_not_active: 'Je wachtwoord is gewijzigd.'
     registrations:
-      destroyed: "Dein Account wurde gelöscht."
-      signed_up: "Du hast dich erfolgreich registriert."
-      signed_up_but_inactive: "Du hast dich erfolgreich registriert. Wir konnten Dich noch nicht anmelden, da Dein Account inaktiv ist."
-      signed_up_but_locked: "Du hast dich erfolgreich registriert. Wir konnten Dich noch nicht anmelden, da Dein Account gesperrt ist."
-      signed_up_but_unconfirmed: "Du hast Dich erfolgreich registriert. Wir konnten Dich noch nicht anmelden, da Dein Account noch nicht bestätigt ist. Du erhältst in Kürze eine E-Mail mit der Anleitung, wie Du Deinen Account freischalten kannst."
-      update_needs_confirmation: "Deine Daten wurden aktualisiert, aber Du musst Deine neue E-Mail-Adresse bestätigen. Du erhälsts in wenigen Minuten eine E-Mail, mit der Du die Änderung Deiner E-Mail-Adresse abschließen kannst."
-      updated: "Deine Daten wurden aktualisiert."
+      signed_up_but_unconfirmed: 'Je ontvangt via e-mail instructies hoe je je account kunt activeren.'
+      signed_up_but_inactive: 'Je bent inschreven. Je kon alleen niet automatisch ingelogd worden omdat je account nog niet geactiveerd is.'
+      signed_up_but_locked: 'Je bent inschreven. Je kon alleen niet automatisch ingelogd worden omdat je account geblokkeerd is.'
+      signed_up: 'Je bent inschreven.'
+      update_needs_confirmation: 'Je hebt je e-mailadres succesvol gewijzigd, maar we moeten je nieuwe mailadres nog verifiëren. Controleer je e-mail en klik op de link in de mail om je mailadres te verifiëren.'
+      updated: 'Je account gegevens zijn opgeslagen.'
+      destroyed: 'Je account is verwijderd, wellicht tot ziens!'
     sessions:
-      signed_in: "Erfolgreich angemeldet."
-      signed_out: "Erfolgreich abgemeldet."
+      signed_in: 'Je bent succesvol ingelogd.'
+      signed_out: 'Je bent succesvol uitgelogd.'
     unlocks:
-      send_instructions: "Du erhältst in wenigen Minuten eine E-Mail mit der Anleitung, wie Du Deinen Account entsperren können."
-      send_paranoid_instructions: "Falls Deine E-Mail-Adresse in unserer Datenbank existiert erhältst Du in wenigen Minuten eine E-Mail mit der Anleitung, wie Du Deinen Account entsperren kannst."
-      unlocked: "Dein Account wurde entsperrt. Du bist jetzt angemeldet."
+      send_instructions: 'Je ontvangt via e-mail instructies hoe je je account kan unlocken.'
+      send_paranoid_instructions: 'Als je e-mailadres bestaat in de database, ontvang je via e-mail instructies hoe je je account kan unlocken.'
+      unlocked: 'Je account is ge-unlocked. Je kan nu weer inloggen.'
   errors:
     messages:
-      taken: "Du bist schon registriert. Du kannst dich einfach einloggen, indem du auf 'Einloggen' klickst"
-      already_confirmed: "wurde bereits bestätigt"
-      confirmation_period_expired: "muss innerhalb %{period} bestätigt werden, bitte fordere einen neuen Link an"
-      expired: "ist abgelaufen, bitte neu anfordern"
-      not_found: "nicht gefunden"
-      not_locked: "ist nicht gesperrt"
+      already_confirmed: "is reeds bevestigd"
+      confirmation_period_expired: "moet worden bevestigd binnen %{period}, probeer het a.u.b. nog een keer"
+      expired: "is verlopen, vraag een nieuwe aan"
+      not_found: "niet gevonden"
+      not_locked: "is niet gesloten"
       not_saved:
-        one: "Konnte %{resource} nicht speichern: ein Fehler."
-        other: "Konnte %{resource} nicht speichern: %{count} Fehler."
+        one: "Kon de %{resource} niet opslaan:"
+        other: "Kon de %{resource} niet opslaan:"

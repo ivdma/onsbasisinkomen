@@ -2,9 +2,9 @@
 
         <div class="container">
           <div class="col-md-8 text-left">
-            <span style="font-size:25px;">De 6. & 7. basisinkomen gingen naar Josefine & Florian uit Nieuw Beeeeeeeerthaaaaa! </span>
+            <span style="font-size:25px;">De 6. & 7. basisinkomen gingen naar Josefine & Florian! </span>
             <br>
-            Van harte geglückwensch en proost.
+            Van harte geglückwensch.
           </div>
           <div class="col-md-4">
             <!-- <a href="/register" class="btn btn-special btn-color">
@@ -12,7 +12,7 @@
             </a> -->
             <a href="/live" class="btn btn-special btn-color">
               <i class="icon-youtube-play"></i>
-              Video van de winnaars bekijken
+              Video van de deelnemers bekijken
             </a>
           </div>
         </div>
@@ -83,7 +83,7 @@
             </div>
 
             <div class="col-sm-6 text-left-sm">
-               <h2 class="slogan-title"><span class="infolink" ng-click="bge_info()">Basisinkomens</span><br>gefinancieerd!</h2>
+               <h2 class="slogan-title"><span class="infolink" ng-click="bge_info()"bBasisinkomens</span><br>gefinancieerd!</h2>
 
             </div>
             <div class="clearfix"></div>
@@ -105,7 +105,7 @@
             <div class="col-md-12 text-center">
 
                <h2 class="slogan-title">
-                We zamelen nu in voor het {{home.totallyFinancedIncomes + 1}}ste <span class="infolink" ng-click="bge_info()">basisinkomen.</span>:
+                We zamelen nu geld in voor het {{home.totallyFinancedIncomes + 1}}e <span class="infolink" ng-click="bge_info()">basisinkomen.</span>:
               </h2>
 
                <div class="progress margin-top-20" style="font-size: 25px;font-weight: 600;line-height: 37px;">
@@ -120,11 +120,8 @@
                      <span ng-show="home.percentageRaw < 50">{{home.amount}} van 12.000€</span>
 
                </div>
-
                   <div ng-controller="SupportController">
-
                     <div ng-show="support_now" ng-include="'/assets/support_crowdfund_form.html'"></div>
-
                   </div>
 
                   <a href="#" ng-hide="support_now" ng-click="support_now = true" class="btn btn-normal btn-color btn-large" style="margin-top:20px;">Ik wil bijdragen!</a>
@@ -185,91 +182,88 @@
 
 
 <div class="container margin-top-30" id="winners"  style="padding-top:30px">
-<div class="row text-center margin-top-50">
-
-        <h1 style="margin-bottom:10px;">Deze mensen</h2>
-          <h3>hebben de eerste <span class="big"><b>{{number_of_winners}}</b></span> basisinkomen gekregen:</h3>
-
+  <div class="row text-center margin-top-50">
+          <h1 style="margin-bottom:10px;">Deze mensen</h2>
+            <h3>hebben de eerste <span class="big"><b>{{number_of_winners}}</b></span> basisinkomen gekregen:</h3>
 
 
-        <div class="row margin-top-70" ng-repeat="winners_row in winners">
-             <div ng-repeat="d in winners_row" class="col-lg-4 col-md-4 col-sm-4 bottom-pad">
-                <div class="content-box ch-item">
-                  <div class="ch-info-wrap">
-                      <div class="testimonial-image-sm">
-                          <a href="/menschen/{{d.id}}">
-                            <img src="{{d.avatar.avatar.url}}">
+
+          <div class="row margin-top-70" ng-repeat="winners_row in winners">
+               <div ng-repeat="d in winners_row" class="col-lg-4 col-md-4 col-sm-4 bottom-pad">
+                  <div class="content-box ch-item">
+                    <div class="ch-info-wrap">
+                        <div class="testimonial-image-sm">
+                            <a href="/menschen/{{d.id}}">
+                              <img src="{{d.avatar.avatar.url}}">
+                          </div>
                         </div>
-                      </div>
-                   <div class="content-box-info text-left">
-                      <h3 style="margin-bottom:5px"><a href="/menschen/{{d.id}}">{{d.name}}</a></h3>
+                     <div class="content-box-info text-left">
+                        <h3 style="margin-bottom:5px"><a href="/menschen/{{d.id}}">{{d.name}}</a></h3>
 
-                      <div ng-switch="d.name">
+                        <div ng-switch="d.name">
 
-                        <p ng-switch-when="Robin">
-                           ist 8 Jahre alt. Als er von seinem Gewinn erfuhr fragte er: "Krieg ich jetzt jeden Monat ein Buch?" <a href="/blog/10">Lies seine Geschichte</a>
-                        </p>
+                          <p ng-switch-when="Robin">
+                             ist 8 Jahre alt. Als er von seinem Gewinn erfuhr fragte er: "Krieg ich jetzt jeden Monat ein Buch?" <a href="/blog/10">Lies seine Geschichte</a>
+                          </p>
 
-                        <p ng-switch-when="Christoph">
-                           hat dank Grundeinkommen seinen Job im Callcenter gekündigt und wird nun Erzieher! <a href="/blog/13">Lies seine Geschichte</a>
-                        </p>
+                          <p ng-switch-when="Christoph">
+                             hat dank Grundeinkommen seinen Job im Callcenter gekündigt und wird nun Erzieher! <a href="/blog/13">Lies seine Geschichte</a>
+                          </p>
 
-                        <p ng-switch-when="Josefine">
-                           Erhält ab 1. März 2015 1.000€ monatliches Grundeinkommen.
-                        </p>
+                          <p ng-switch-when="Josefine">
+                             Erhält ab 1. März 2015 1.000€ monatliches Grundeinkommen.
+                          </p>
 
-                        <p ng-switch-when="Florian">
-                           Erhält ab 1. März 2015 1.000€ monatliches Grundeinkommen.
-                        </p>
+                          <p ng-switch-when="Florian">
+                             Erhält ab 1. März 2015 1.000€ monatliches Grundeinkommen.
+                          </p>
 
-                        <p ng-switch-default>
-                           Erhält seit 1. Oktober 1.000€ monatliches Grundeinkommen. <a href="/menschen/{{d.id}}">Vorhaben ansehen</a>
-                        </p>
-                      </div>
-                   </div>
-                </div>
-             </div>
-
-
-             <div ng-if="!current.user && $index == winners.length - 1" class="col-lg-4 col-md-4 col-sm-4 bottom-pad">
-                <div class="content-box ch-item">
-                  <div class="ch-info-wrap">
-                      <div class="testimonial-image-sm">
-                          <a href="/register">
-                            <img src="/assets/team/team-member.jpg">
+                          <p ng-switch-default>
+                             Erhält seit 1. Oktober 1.000€ monatliches Grundeinkommen. <a href="/menschen/{{d.id}}">Vorhaben ansehen</a>
+                          </p>
                         </div>
-                      </div>
-                   <div class="content-box-info text-left">
-                      <h3 style="margin-bottom:5px"><a href="/register">Und ab April Du?</a></h3>
-
-                           Ende März wird das 8. Grundeinkommen verlost. Du kannst es gewinnen. <a href="/register">Jetzt teilnehmen</a></a>
-                        </p>
-                   </div>
-                </div>
-             </div>
+                     </div>
+                  </div>
+               </div>
 
 
-             <div ng-if="current.user && $index == winners.length - 1" class="col-lg-4 col-md-4 col-sm-4 bottom-pad">
-                <div class="content-box ch-item">
-                  <div class="ch-info-wrap">
-                      <div class="testimonial-image-sm">
-                          <a href="/boarding?trigger=wants_to_participate">
-                            <img src="{{current.user.avatar.avatar.url}}">
+               <div ng-if="!current.user && $index == winners.length - 1" class="col-lg-4 col-md-4 col-sm-4 bottom-pad">
+                  <div class="content-box ch-item">
+                    <div class="ch-info-wrap">
+                        <div class="testimonial-image-sm">
+                            <a href="/register">
+                              <img src="/assets/team/team-member.jpg">
+                          </div>
                         </div>
-                      </div>
-                   <div class="content-box-info text-left">
-                      <h3 style="margin-bottom:5px"><a href="/boarding?trigger=wants_to_participate">Und ab Februar Du?</a></h3>
+                     <div class="content-box-info text-left">
+                        <h3 style="margin-bottom:5px"><a href="/register">Und ab April Du?</a></h3>
 
-                           Mitte Februar wird das 6. Grundeinkommen verlost. Du kannst es gewinnen. <a href="/boarding?trigger=wants_to_participate">Jetzt teilnehmen</a></a>
-                        </p>
-                   </div>
-                </div>
-             </div>
+                             Ende März wird das 8. Grundeinkommen verlost. Du kannst es gewinnen. <a href="/register">Jetzt teilnehmen</a></a>
+                          </p>
+                     </div>
+                  </div>
+               </div>
 
-        </div>
 
-      </div>
+               <div ng-if="current.user && $index == winners.length - 1" class="col-lg-4 col-md-4 col-sm-4 bottom-pad">
+                  <div class="content-box ch-item">
+                    <div class="ch-info-wrap">
+                        <div class="testimonial-image-sm">
+                            <a href="/boarding?trigger=wants_to_participate">
+                              <img src="{{current.user.avatar.avatar.url}}">
+                          </div>
+                        </div>
+                     <div class="content-box-info text-left">
+                        <h3 style="margin-bottom:5px"><a href="/boarding?trigger=wants_to_participate">Und ab Februar Du?</a></h3>
 
+                             Mitte Februar wird das 6. Grundeinkommen verlost. Du kannst es gewinnen. <a href="/boarding?trigger=wants_to_participate">Jetzt teilnehmen</a></a>
+                          </p>
+                     </div>
+                  </div>
+               </div>
+
+          </div>
+  </div>
 </div>
 
 
@@ -392,7 +386,7 @@
      <div class="slogan-content margin-top-30">
         <div class="row margin-top-30">
            <div class=" col-lg-12 col-md-12 com-sm-12 col-xs-12">
-              <h3 class="title">Nieuwegeiten</h3>
+              <h3 class="title">Nieuws</h3>
                  </div>
                      <div class="clearfix"></div>
                         <ul>

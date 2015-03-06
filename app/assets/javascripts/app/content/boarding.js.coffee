@@ -20,7 +20,6 @@ angular.module("boarding", ['Crowdbar', 'Wish','State','Chance','Crowdcard','Ava
             Crowdbar.verify().then (has_crowdbar) ->
               has_crowdbar
         ]
-
 ]
 
 .controller "BoardingController", [
@@ -56,11 +55,11 @@ angular.module("boarding", ['Crowdbar', 'Wish','State','Chance','Crowdcard','Ava
       #'gewinnspiel_question'
       'wishes'
       #'gewinnspiel'
-      'verify_crowdcard'
+      #'verify_crowdcard'
 
-      'verify_gewinnspiel'
+      #'verify_gewinnspiel'
 
-      'gewinnspiel_thanks'
+      #'gewinnspiel_thanks'
 
       #if everything completed only
       #'states'

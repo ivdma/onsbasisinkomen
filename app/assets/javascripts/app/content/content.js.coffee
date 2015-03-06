@@ -5,7 +5,7 @@ angular.module("content", ['ng-breadcrumbs'])
     $routeProvider
     .when "/info",
       templateUrl: "/assets/info.html"
-      label: "So funktioniert's"
+      label: "zo werkt het"
 
     .when "/crowdapp",
       controller: "CrowdbarController"
@@ -20,8 +20,8 @@ angular.module("content", ['ng-breadcrumbs'])
     .when "/cola-getrunken",
       redirectTo: "/support/colagetrunken"
 
-    .when "/crowdbar/install",
-      redirectTo: "/support/crowdbar"
+    # .when "/crowdbar/install",
+    #   redirectTo: "/support/crowdbar"
 
     .when "/crowdfunding",
       redirectTo: "/support/crowdfund"

@@ -35,7 +35,7 @@ angular.module "Support", ["rails"]
 
     $scope.tabs =
       crowdbar: false
-      crowdcard: false
+      # crowdcard: false
       crowdfund: false
       donate: false
       cola: false
@@ -50,20 +50,17 @@ angular.module "Support", ["rails"]
     # if $location.search().tab
     #   alert $location.search().tab
 
-    if $location.search().trigger && $location.search().trigger == 'crowdbar_installed'
+    # if $location.search().trigger && $location.search().trigger == 'crowdbar_installed'
 
-      Crowdbar.verify().then (has_crowdbar) ->
-        if has_crowdbar
-          modalInstance = $modal.open(
-            templateUrl: "/assets/boarding/crowdbar_thanks.html"
-            size: 'lg'
-          )
-        else
-          Crowdbar.open_crowdbar_after_install_modal(true)
-          $scope.current.setFlag('crowdbarNotFoundAfterInstall', true)
-
-
-
+    #   Crowdbar.verify().then (has_crowdbar) ->
+    #     if has_crowdbar
+    #       modalInstance = $modal.open(
+    #         templateUrl: "/assets/boarding/crowdbar_thanks.html"
+    #         size: 'lg'
+    #       )
+    #     else
+    #       Crowdbar.open_crowdbar_after_install_modal(true)
+    #       $scope.current.setFlag('crowdbarNotFoundAfterInstall', true)
 
 
 
