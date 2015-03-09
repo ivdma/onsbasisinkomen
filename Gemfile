@@ -34,6 +34,7 @@ gem 'browser'
 gem 'therubyracer'
 gem 'less-rails'
 gem 'less-rails-bootstrap'
+gem 'dotenv-rails'
 
 # production
 gem 'lograge'
