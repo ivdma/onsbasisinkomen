@@ -1,5 +1,5 @@
 <div class="modal-header">
-    <h3 class="modal-title">Profil bearbeiten</h3>
+    <h3 class="modal-title">Profiel bewerken</h3>
 </div>
 <div class="modal-body">
 
@@ -16,7 +16,7 @@
                 <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
                 <div class="col-sm-10 text-left">
                   <input name="name" ng-model="register_user.name" type="text" class="form-control" id="inputEmail3" placeholder="Vorname oder Nickname (öffentlich)" maxlength="40" required ng-minlength="2">
-                  <p ng-show="(RegisterForm.name.$error.minlength || RegisterForm.name.$error.required) && !RegisterForm.name.$pristine" class="help-block">Der Name ist erforderlich und muss mindestens 2 Zeichen lang sein.</p>
+                  <p ng-show="(RegisterForm.name.$error.minlength || RegisterForm.name.$error.required) && !RegisterForm.name.$pristine" class="help-block">Uw naam is ongeldig, deze moet minstens 2 karakters lang zijn..</p>
 
                 </div>
               </div>
@@ -24,7 +24,7 @@
                 <label for="inputEmail3" class="col-sm-2 control-label">E-Mail</label>
                 <div class="col-sm-10 text-left">
                   <input name="email" ng-model="register_user.email" type="email" class="form-control" id="inputEmail3" placeholder="E-Mail-Adresse" required>
-                  <p ng-show="(RegisterForm.email.$invalid || RegisterForm.email.$error.required) && !RegisterForm.email.$pristine" class="help-block">Bitte gib eine gültige E-Mail-Adresse an</p>
+                  <p ng-show="(RegisterForm.email.$invalid || RegisterForm.email.$error.required) && !RegisterForm.email.$pristine" class="help-block">Dit is een ongeldig email adres.</p>
                   <p ng-show="RegisterForm.email.$error.serverMessage" class="help-block">{{RegisterForm.email.$error.serverMessage}}</p>
 
                 </div>
@@ -33,7 +33,7 @@
                 <div class="col-sm-offset-2 col-sm-10 text-left">
                   <div class="checkbox">
                     <label>
-                      <input name="newsletter" ng-model="register_user.newsletter" type="checkbox">  Bitte informiert mich per E-Mail über weitere Verlosungstermine und bei wichtigen Änderungen auf der Seite.
+                      <input name="newsletter" ng-model="register_user.newsletter" type="checkbox">  Informeer mij per mail over komende verlotingen en verdere informatie
                     </label>
                   </div>
                 </div>
@@ -45,7 +45,7 @@
                       <div class="bounce2"></div>
                       <div class="bounce3"></div>
                     </div>
-                  <span ng-hide="submitted">Änderungen speichern</span>
+                  <span ng-hide="submitted">Veranderingen opslaan</span>
                   </button>
                 </div>
               </div>
@@ -55,16 +55,16 @@
 
             <hr>
 
-            <h3>Konto löschen</h3>
+            <h3>Account verwijderen</h3>
 
             <div class="form-group text-left">
                 <div class="col-sm-offset-2 col-sm-10 text-left">
                   <div class="checkbox">
                     <label>
-                      <input name="delete_account_check" ng-model="delete_account_check" type="checkbox"> Ja, ich will mein Nutzungs-Konto bei euch unwiderruflich löschen.
+                      <input name="delete_account_check" ng-model="delete_account_check" type="checkbox">Ja, ik wil mijn account verwijderen, LET OP: uw gegevens zijn niet terug te halen..
 
                       <p ng-show="delete_account_check">
-                        <button ng-click="delete_account()" style="background:red" class="btn btn-special btn-red">Konto jetzt löschen</button>
+                        <button ng-click="delete_account()" style="background:red" class="btn btn-special btn-red">Acconut verwijderen.</button>
                       </p>
                     </label>
                   </div>

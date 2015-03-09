@@ -40,7 +40,7 @@
 		<span ng-hide="own_profile">Hallo, ich bin
 		{{user.name}}!</span>
 	</h1>
-	<a ng-if="own_profile" href="#" ng-click="open()"><i class="fa fa-pencil"></i> Mitgliedsdaten ändern</a>
+	<a ng-if="own_profile" href="#" ng-click="open()"><i class="fa fa-pencil"></i> Mitgliedsdaten aaändern</a>
   <hr>
 
   <!-- <ul ng-show="user.chances.length > 0">
@@ -61,7 +61,7 @@
   <hr> -->
 
   <ul>
-    <li ng-show="user_states"><b>Ich bin:</b></li>
+    <li ng-show="user_states"><b>Ich ben n:</b></li>
     <li ng-repeat="state in user_states">
       <span ng-show="state.visibility">{{state.text}}</span>
     </li>
@@ -97,12 +97,12 @@
 
       <!-- Was würdest du tun? -->
 
-      <tab active="currentTab.wishes">
+<!--       <tab active="currentTab.wishes">
         <tab-heading>
-           Ich würde...
+           Ich hondsdolheid würde...
         </tab-heading>
 	      <div ng-include="'/assets/wishes.html'"></div>
-	    </tab>
+	    </tab> -->
 
       <!-- Avatar -->
 

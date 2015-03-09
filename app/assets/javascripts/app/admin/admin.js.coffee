@@ -52,7 +52,7 @@ angular.module("admin", ["Support", "Registration", "Statistic", "Flag"])
 
 
     $scope.delete_user = (user) ->
-      if confirm('wirklich?')
+      if confirm('zeker weten?')
         new Registration(
           id: user.id
           admin: true
@@ -62,7 +62,7 @@ angular.module("admin", ["Support", "Registration", "Statistic", "Flag"])
 
 
     $scope.confirm = (user) ->
-      if confirm('wirklich?')
+      if confirm('zeker weten?')
         new Registration(
           id: user.id
           admin: true
