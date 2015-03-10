@@ -11,23 +11,20 @@ Rails.application.configure do
   config.eager_load = true
 
   #config.action_mailer.delivery_method = :mailjet
-  config.action_mailer.default_url_options = {
-    host: 'https://www.mein-grundeinkommen.de'
-  }
+  config.action_mailer.default_url_options = { host: 'http://www.onsbasisinkomen.nl' }
 
-  config.action_mailer.default_options = { from: "\"Mein Grundeinkommen\" <micha@meinbge.de>" }
+  config.action_mailer.default_options = { from: "\"Ons Basisinkomen\" <hallo@onsbasisinkomen.nl>" }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address   => "smtp.mandrillapp.com",
-    :port      => 587, # ports 587 and 2525 are also supported with STARTTLS
-    :enable_starttls_auto => true, # detects and uses STARTTLS
-    :user_name => "micha@meinbge.de",
-    :password  => "W_8cahHMZNbr66JjX_-zYw", # SMTP password is any valid API key
-    :authentication => 'login', # Mandrill supports 'plain' or 'login'
-    :domain => 'meinbge.de', # your domain to identify your server when connecting
-    :from => "\"Mein Grundeinkommen\" <micha@meinbge.de>"
-
+    address:              'smtp.mandrillapp.com',
+    port:                 587,                     # ports 587 and 2525 are also supported with STARTTLS
+    enable_starttls_auto: true,                    # detects and uses STARTTLS
+    user_name:            ENV['MANDRILL_USERNAME'],
+    password:             ENV['MANDRILL_PASSWORD'], # SMTP password is any valid API key
+    authentication:       'login',                 # Mandrill supports 'plain' or 'login'
+    domain:               'onsbasisinkomen.nl',    # your domain to identify your server when connecting
+    from:                 "\"Ons Basisinkomen\" <hallo@onsbasisinkomen.nl>"
   }
 
   # Full error reports are disabled and caching is turned on.

@@ -1,11 +1,11 @@
-class PaymentsController < ApplicationController
 require "uri"
 require "net/http"
 
-protect_from_forgery :except => [:create] #Otherwise the request from PayPal wouldn't make it to the controller
+class PaymentsController < ApplicationController
+  protect_from_forgery except: [:create] # Otherwise the request from PayPal wouldn't make it to the controller
 
   def create
-    response = validate_IPN_notification(request.raw_post, false )
+    response = validate_IPN_notification(request.raw_post, false)
     case response
       when "VERIFIED"
         Rails.logger.info "VERIFIED"
@@ -14,11 +14,13 @@ protect_from_forgery :except => [:create] #Otherwise the request from PayPal wou
           Rails.logger.info support.payment_completed
           if params[:payment_status] == 'Completed'
             support.payment_completed = true
-            support.email = params[:payer_email] if !support.email && params[:payer_email]
-            support.nickname = params[:first_name] if !support.nickname && params[:first_name]
-            support.city = params[:address_city] if params[:address_city]
-            support.country = params[:address_country] if params[:address_country]
+            support.email             = params[:payer_email]     if !support.email && params[:payer_email]
+            support.nickname          = params[:first_name]      if !support.nickname && params[:first_name]
+            support.city              = params[:address_city]    if params[:address_city]
+            support.country           = params[:address_country] if params[:address_country]
+
             support.save
+
             Rails.logger.info support.payment_completed
             support_test = Support.find(params[:custom].to_i)
             Rails.logger.info support_test.payment_completed
@@ -33,10 +35,8 @@ protect_from_forgery :except => [:create] #Otherwise the request from PayPal wou
     render :nothing => true
   end
 
-
-
-
   protected
+
   def validate_IPN_notification(raw, test)
     uri = URI.parse('https://www.paypal.com/cgi-bin/webscr?cmd=_notify-validate')
     uri = URI.parse('https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_notify-validate') if test
