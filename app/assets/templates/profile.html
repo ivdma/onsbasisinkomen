@@ -37,10 +37,10 @@
 
 	<h1 class="margin-top-20" style="margin-bottom:10px;">
 		<span ng-show="own_profile">Hallo {{user.name}}!</span>
-		<span ng-hide="own_profile">Hallo, ich bin
+		<span ng-hide="own_profile">Hallo, ik ben
 		{{user.name}}!</span>
 	</h1>
-	<a ng-if="own_profile" href="#" ng-click="open()"><i class="fa fa-pencil"></i> Mitgliedsdaten aaändern</a>
+	<a ng-if="own_profile" href="#" ng-click="open()"><i class="fa fa-pencil"></i> profiel aanpassen</a>
   <hr>
 
   <!-- <ul ng-show="user.chances.length > 0">
@@ -106,7 +106,7 @@
 
       <!-- Avatar -->
 
-	    <tab  active="currentTab.image" ng-if="default_avatar" heading="Gesicht zeigen">
+	    <tab  active="currentTab.image" ng-if="default_avatar" heading="Profiel foto">
 
         <div ng-include="'/assets/boarding/avatar.html'"></div>
 	    </tab>
@@ -117,7 +117,7 @@
       <tab active="currentTab.states">
 
         <tab-heading>
-          <i class="fa fa-check" ng-if="user_states.length > 0"></i> Ich bin...
+          <i class="fa fa-check" ng-if="user_states.length > 0"></i> Ik ben...
         </tab-heading>
 
         <div ng-include="'/assets/states.html'"></div>
@@ -128,7 +128,7 @@
       <tab active="currentTab.gewinnspiel">
          <tab-heading>
          <i class="fa fa-warning" style="color:red;" ng-if="current.participates() && (!current.user.confirmed_at || !current.participation_verified())"></i>
-          Verlosung
+          Verloting:
          </tab-heading>
 
         <div class="container margin-top-30">
