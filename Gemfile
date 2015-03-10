@@ -41,6 +41,8 @@ gem 'lograge'
 gem 'unicorn'
 
 group :production, :staging do
+  ruby '2.1.5'
+
   gem 'pg'
   gem 'rails_12factor'
   gem 'passenger'
