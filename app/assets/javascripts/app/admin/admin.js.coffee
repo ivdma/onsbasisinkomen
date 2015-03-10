@@ -76,9 +76,9 @@ angular.module("admin", ["Support", "Registration", "Statistic", "Flag"])
           ich habe deine E-Mail-Adresse gerade freigeschaltet. Du kannst dich nun auf meinbge.de/login?email=#{user.email} damit einloggen.
           Am besten du lädst die Seite vorher neu.
 
-          Liebe Grüße,
+          Fijne groetjes,
 
-          Micha
+          Henk
 
 
           """

@@ -66,7 +66,6 @@ angular.module("boarding", ['Crowdbar', 'Wish','State','Chance','Crowdcard','Ava
 
       'crowdbar'
       'crowdbar_thanks'
-
       #'crowdapp'
 
       'crowdcard'
@@ -77,9 +76,7 @@ angular.module("boarding", ['Crowdbar', 'Wish','State','Chance','Crowdcard','Ava
       'crowdfund'
       # 'donate'
       # 'donate_thanks'
-
       'done'
-
 
 
     ]

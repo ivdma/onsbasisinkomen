@@ -111,17 +111,17 @@ angular.module "Support", ["rails"]
     $scope.support.set_equals_bi = (nv) ->
       r = '€ '+ nv + ',- euro volstaat voor '
       if nv > 32
-        r += Math.floor((nv / 33)) + ' Dag'
+        r += Math.floor((nv / 33)) + ' dag'
         if nv > 65
           r += 'en'
       hours = Math.floor((nv % 33) / 1.375)
       if nv == 1
-        r += '20 Minuten'
+        r += '20 minuten'
       if hours > 0
         if nv > 32
           r += ' en'
-        r += ' ' + hours + ' Uren'
-      r += ' Basisinkomen'
+        r += ' ' + hours + ' uren'
+      r += ' basisinkomen'
       $scope.support.equals_bi = r
 
 
