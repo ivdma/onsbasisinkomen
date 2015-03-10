@@ -10,7 +10,6 @@ lib/tasks/signups.rake
 log
 pickle-email-*.html
 plan
-public/startnext.json
 public/system
 public/uploads/*
 rerun.txt
@@ -21,14 +20,7 @@ vendor/bundle
 
 mailings/launch-beta.html
 
-public/crowdcard.json
-
-public/crowdcard_daily.json
-
-public/news.json
-
 .ruby-version
-
 .ruby-gemset
 .ruby-version*
 .ruby-gemset*
