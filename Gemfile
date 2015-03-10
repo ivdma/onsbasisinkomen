@@ -42,6 +42,8 @@ gem 'unicorn'
 
 group :production, :staging do
   gem 'pg'
+  gem 'rails_12factor'
+  gem 'passenger'
 end
 
 group :development, :test do
