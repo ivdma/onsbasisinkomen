@@ -1,9 +1,8 @@
-Ons Basisinkomen
-================
+# Ons Basisinkomen
 
-# Installation
+## Installation
 
-## Rubies and Gems
+### Rubies and Gems
 
 Obvious...
 
@@ -11,7 +10,7 @@ Obvious...
 bundle install
 ```
 
-## External credentials
+### External credentials
 
 Copy `.env.example` to `.env` and put your credentials in it.
 
@@ -19,7 +18,7 @@ Copy `.env.example` to `.env` and put your credentials in it.
 cp .env.example .env
 ```
 
-## Database
+### Database
 
 Migrate your database
 
